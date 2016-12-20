@@ -1,0 +1,21 @@
+<ion-view >
+    <ion-content>
+   <div class="row">
+        <div class="col">
+       <img src="{{info.better_featured_image.source_url}}" width="150px" height="150px"/>
+        </div>
+<div class="col">
+ <h3><span class="songlabel" >{{info.title.rendered}}</span></h3>
+ <p  class="info">SINGERS</p>
+<p class="info">Label:<span >{{info.custom_fields.label}}</span></p>
+<p  class="info">Artists:<span>{{info.custom_fields.artists}}</span></p>
+<p class="info">Music:<span>{{info.custom_fields.music}} </span></p>
+<p  class="info">Lyrics:<span>{{info.custom_fields.lyrics}} </span></p>
+</div>
+</div>
+<div class="list card" style="background-color:silver;"> 
+<audio src="{{info.content.rend | trustUrl}}" audioplayer controls></audio>
+</div>
+    </ion-content>
+</ion-view>
+

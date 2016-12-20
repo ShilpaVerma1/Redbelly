@@ -1,0 +1,21 @@
+ <ion-view view-title="Albums">
+     <ion-content>
+ <div class="row" ng-repeat="image in livelinks " ng-if="$index % 3 === 0">
+        <div class="col col-33" >
+            <a ng-href="#/app/info/{{livelinks[$index].id}}">
+            <img ng-src="{{livelinks [$index].images}}" width="100%" />
+            </a>
+        </div>
+        <div class="col col-33" >
+             <a ng-href="#/app/info/{{livelinks[$index+1].id}}">
+            <img ng-src="{{livelinks [$index + 1].images}}" width="100%" />
+            </a>
+        </div>
+        <div class="col col-33" >
+             <a ng-href="#/app/info/{{livelinks[$index+2].id}}">
+            <img ng-src="{{livelinks [$index + 2].images}}" width="100%" />
+             </a>
+        </div>
+    </div>
+     </ion-content>
+ </ion-view>

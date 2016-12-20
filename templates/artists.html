@@ -1,0 +1,15 @@
+ <ion-view view-title="Artists">
+     <ion-content ng-controller="ArtistCtrl">
+ <div class="row" ng-repeat="image in Artistsimgs " ng-if="$index % 2 === 0">
+     
+        <div class="col col-50"  >  
+          
+            <img ng-src="{{Artistsimgs [$index].images}}" width="100%" height="150px" />      
+        </div>
+        <div class="col col-50" >
+            <img ng-src="{{Artistsimgs[$index + 1].images}}" width="100%" height="150px" />
+        </div>
+        
+    </div>
+     </ion-content>
+ </ion-view>

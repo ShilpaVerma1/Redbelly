@@ -1,0 +1,65 @@
+<ion-view view-title="Redbelly">
+  <ion-content >
+   <!-- <div class="list card" >
+     <div class="item ion-item ">
+       <ion-slide-box  does-continue="true" auto-play="true"  slide-interval="4000">
+         <ion-slide ng-repeat="img in images" >
+            <div style="position:relative;" >
+                 <i class="icon ion-item ion-chevron-left"  ng-click="slidePrevious()" style="color:white;position:absolute;top:40%;"></i>
+                 <img ng-src="{{img.src}}" height="150px" width="100%"/>
+                 <i class="icon ion-item ion-chevron-right" ng-click="slideNext()" style="z-index:999;color:black;color:white;position:absolute;top:40%;right:0;"></i>
+         </div>
+         </ion-slide>
+       </ion-slide-box>
+    </div>
+  </div>-->
+  
+ <div class="list card" ng-controller="imgCtrl" >
+     <div class="item ion-item ">
+       <ion-slide-box  delegate-handle="image-viewer" on-slide-changed="slideChanged(index)" does-continue="true" auto-play="true"  slide-interval="4000">
+         <ion-slide ng-repeat="img in aimages">                 
+            <div style="position:relative;" >
+                 <i class="icon ion-item ion-chevron-left"  ng-click="slidePrevious()" style="color:white;position:absolute;top:40%;"></i>
+                 <img ng-src="{{img.src}}" class="imggg" />
+                 <i class="icon ion-item ion-chevron-right" ng-click="slideNext()" style="z-index:999;color:black;color:white;position:absolute;top:40%;right:0;"></i>
+         </div>
+         </ion-slide>
+       </ion-slide-box>
+    </div>
+  </div>
+  
+<div class="row" ng-repeat="image in Allimages" ng-if="$index % 3 === 0">
+        <div class="col col-33" >
+          <p style="color:red;font-weight:bold; margin-left:30px;">Videos</p>
+            <img ng-src="{{Allimages[$index].src}}" width="100%" height="130px;" />
+         <span style="background-color:red; margin-left:30px;"> <a ng-href="#/app/videos" style="color:white;text-decoration:none;">View all</a></span>
+        </div>
+        <div class="col col-33" >
+          <p style="color:red;font-weight:bold; margin-left:30px;">Albums</p>
+            <img ng-src="{{Allimages[$index + 1].src}}" width="100%" height="130px;" />
+             <span style="background-color:red; margin-left:30px;">
+              <a ng-href="#/app/albums" style="color:white;text-decoration:none;">View all</a>
+              </span>
+        </div>
+        <div class="col col-33" >
+          <p  style="color:red;font-weight:bold;margin-left:30px;" >Artists</p>
+            <img ng-src="{{Allimages[$index + 2].src}}" width="100%" height="130px;" />
+              <span style="background-color:red; margin-left:30px;">
+              <a ng-href="#/app/artists" style="color:white;text-decoration:none;">View all</a>
+              </span>
+        </div>
+    </div>
+
+
+<img src="img/music.png" height="50px" style="margin-left:20px;"/>
+<label class="videohome">Videos  Of the week</label><a ng-href="#/app/videos">
+  <div class="list" ng-repeat="vid in Videos"  ng-if="$index % 1=== 0"  >
+     <div class="item" ng-if="$index+1 < Videos.length">
+         <iframe ng-src="{{vid.images}}" width="100%" frameborder="0" allowfullscreen>
+         </iframe>
+    </div></a>
+  </div>
+  </div>
+
+  </ion-content>
+</ion-view>

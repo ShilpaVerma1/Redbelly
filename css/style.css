@@ -1,0 +1,65 @@
+.custom {
+  background-color:limegreen!important; /* This sets the background color*/
+ 
+ }
+ 
+/*Set the background to transparent for ion-item*/
+.custom .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  color: white; 
+  font-size:18px;   /*Text color for each item*/
+}
+
+ 
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+ 
+/*Just makes the type white*/
+.custom h2,
+.custom h3,
+.custom p,
+.custom a {
+  color: white;  /*Text color for each item, overrides the color property above*/
+}
+.videohome{
+ font-size:20px;
+ color:red;
+ font-weight: bold;
+
+}
+.Artisthome{
+ font-size:20px;
+ color:red;
+ font-weight: bold;
+
+}
+.songlabel{
+  color:red;
+  height:20px;
+  margin-right:10s0px;
+  font-weight:bold;
+  font-size:25px;
+  padding-right:10px;
+}
+.info{
+ margin-left:5px;
+  font-size:15px;
+   margin-top:20px;
+}
+#singer{
+margin-top:10px;
+padding-right:10px;
+color:black;
+}
+span
+{
+  color:indianred;
+}
+.imggg
+{
+  height:200px;
+  
+  width:94vw;  
+}
